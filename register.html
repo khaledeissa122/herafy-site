@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>اطلب حرفي</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="bootstrap-rtl.css" type="text/css" />
+    <link rel="stylesheet" href="css/owl.carousel.css" type="text/css" />
+    <link href="css/jquery-ui.min.css" rel="stylesheet">
+    <link href="css/jquery-ui.structure.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/normalize.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/default.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script src="js/modernizr.custom.js"></script>
+
+
+    <!-- <script src="/js/tinymce/tinymce.min.js" type="text/javascript"></script> -->
+    <!-- <script src='//cdn.tinymce.com/4/tinymce.min.js'></script> -->
+    <script src='js/tiny.js'></script>
+
+</head>
+
+<body style="background-color:#553B63">
+    <!--Content-->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="loginBox">
+                    <figure>
+                        <a href="index.html" title="register">
+                            <img src="img/logo2.png" alt="Logo">
+                        </a>
+                    </figure>
+                    <h2>إنشاء الحساب</h2>
+                    <form class="settingForm text-right" id="register_form" method="post" action="">
+                        <div></div>
+                        <div class="form-group">
+                            <label>الاسم الاول</label>
+                            <input name="name" id="name" class="form-control " type="text">
+                        </div>
+                        <div class="form-group">
+                            <label>الاسم الاخير</label>
+                            <input name="username" id="username" class="form-control " type="text">
+
+                        </div>
+
+                        <div class="form-group">
+                            <label>البريد الإلكتروني</label>
+                            <input name="email" id="email" class="form-control " type="text">
+                        </div>
+                        <div class="form-group">
+                            <label>كلمة المرور</label>
+                            <input name="password" id="password" class="form-control " type="password">
+                        </div>
+                        <div class="form-group">
+                            <label>تاكيد كلمة المرور</label>
+                            <input name="password_confirm" id="password" class="form-control " type="password">
+                        </div>
+
+                        <div class="form-group text-right pull-right m-t-15">
+                            <input name="agree" id="agree" type="checkbox">
+                            <label class="">أوافق على
+                                <a href="#">اتفاقية الاستخدام</a>.</label>
+                        </div>
+                        <div class="clearfix"></div>
+                        <input value="  متابعة" class="loginBtn loginBtn_2" type="submit">
+                    </form>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!--End Content-->
+
+</body>
+
+</html>
+<script>
+    $(document).ready(function () {
+        var advice = $(".advice_kind:checked").val();
+        if (advice == "1") {
+            $(".advice_price").show(400);
+            $(".advice_phone_notification").show(400);
+        } else {
+            $(".advice_phone_notification").hide(400);
+            $(".advice_price").hide(400);
+        }
+        $('.advice_kind').on('ifClicked', function (event) {
+            var value = $(this).val();
+            if (value == "0") {
+                $(".advice_phone_notification").hide(400);
+                $(".advice_price").hide(400);
+            } else {
+                $(".advice_price").show(400);
+                $(".advice_phone_notification").show(400);
+            }
+        });
+    });
+</script>
